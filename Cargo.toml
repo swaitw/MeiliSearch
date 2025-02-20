@@ -1,8 +1,45 @@
 [workspace]
+resolver = "2"
 members = [
-    "meilisearch-http",
-    "meilisearch-error",
+    "crates/meilisearch",
+    "crates/meilitool",
+    "crates/meilisearch-types",
+    "crates/meilisearch-auth",
+    "crates/meili-snap",
+    "crates/index-scheduler",
+    "crates/dump",
+    "crates/file-store",
+    "crates/permissive-json-pointer",
+    "crates/milli",
+    "crates/filter-parser",
+    "crates/flatten-serde-json",
+    "crates/json-depth-checker",
+    "crates/benchmarks",
+    "crates/fuzzers",
+    "crates/tracing-trace",
+    "crates/xtask",
+    "crates/build-info",
 ]
 
+[workspace.package]
+version = "1.13.0"
+authors = [
+    "Quentin de Quelen <quentin@dequelen.me>",
+    "Clément Renault <clement@meilisearch.com>",
+]
+description = "Meilisearch HTTP server"
+homepage = "https://meilisearch.com"
+readme = "README.md"
+edition = "2021"
+license = "MIT"
+
 [profile.release]
-debug = true
+codegen-units = 1
+
+[profile.dev.package.flate2]
+opt-level = 3
+
+[profile.dev.package.grenad]
+opt-level = 3
+[profile.dev.package.roaring]
+opt-level = 3

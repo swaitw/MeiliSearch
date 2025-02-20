@@ -1,45 +1,48 @@
 # Compile
-FROM    alpine:3.14 AS compiler
+FROM    rust:1.81.0-alpine3.20 AS compiler
 
-RUN     apk update --quiet
-RUN     apk add curl
-RUN     apk add build-base
+RUN     apk add -q --no-cache build-base openssl-dev
 
-RUN     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-WORKDIR /meilisearch
-
-COPY    Cargo.lock .
-COPY    Cargo.toml .
-
-COPY    meilisearch-error/Cargo.toml meilisearch-error/
-COPY    meilisearch-http/Cargo.toml meilisearch-http/
-
-ENV     RUSTFLAGS="-C target-feature=-crt-static"
-
-# Create dummy main.rs files for each workspace member to be able to compile all the dependencies
-RUN     find . -type d -name "meilisearch-*" | xargs -I{} sh -c 'mkdir {}/src; echo "fn main() { }" > {}/src/main.rs;'
-# Use `cargo build` instead of `cargo vendor` because we need to not only download but compile dependencies too
-RUN     $HOME/.cargo/bin/cargo build --release
-# Cleanup dummy main.rs files
-RUN     find . -path "*/src/main.rs" -delete
+WORKDIR /
 
 ARG     COMMIT_SHA
 ARG     COMMIT_DATE
-ENV     COMMIT_SHA=${COMMIT_SHA} COMMIT_DATE=${COMMIT_DATE}
+ARG     GIT_TAG
+ENV     VERGEN_GIT_SHA=${COMMIT_SHA} VERGEN_GIT_COMMIT_TIMESTAMP=${COMMIT_DATE} VERGEN_GIT_DESCRIBE=${GIT_TAG}
+ENV     RUSTFLAGS="-C target-feature=-crt-static"
 
 COPY    . .
-RUN     $HOME/.cargo/bin/cargo build --release
+RUN     set -eux; \
+        apkArch="$(apk --print-arch)"; \
+        if [ "$apkArch" = "aarch64" ]; then \
+            export JEMALLOC_SYS_WITH_LG_PAGE=16; \
+        fi && \
+        cargo build --release -p meilisearch -p meilitool
 
 # Run
-FROM    alpine:3.14
-
-RUN     apk add -q --no-cache libgcc tini
-
-COPY    --from=compiler /meilisearch/target/release/meilisearch .
+FROM    alpine:3.20
+LABEL   org.opencontainers.image.source="https://github.com/meilisearch/meilisearch"
 
 ENV     MEILI_HTTP_ADDR 0.0.0.0:7700
+ENV     MEILI_SERVER_PROVIDER docker
+
+RUN     apk add -q --no-cache libgcc tini curl
+
+# add meilisearch and meilitool to the `/bin` so you can run it from anywhere
+# and it's easy to find.
+COPY    --from=compiler /target/release/meilisearch /bin/meilisearch
+COPY    --from=compiler /target/release/meilitool /bin/meilitool
+# To stay compatible with the older version of the container (pre v0.27.0) we're
+# going to symlink the meilisearch binary in the path to `/meilisearch`
+RUN     ln -s /bin/meilisearch /meilisearch
+
+# This directory should hold all the data related to meilisearch so we're going
+# to move our PWD in there.
+# We don't want to put the meilisearch binary
+WORKDIR /meili_data
+
+
 EXPOSE  7700/tcp
 
 ENTRYPOINT ["tini", "--"]
-CMD     ./meilisearch
+CMD     /bin/meilisearch

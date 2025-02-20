@@ -1,192 +1,124 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="MeiliSearch" width="200" height="200" />
+  <a href="https://www.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=logo#gh-light-mode-only" target="_blank">
+    <img src="assets/meilisearch-logo-light.svg?sanitize=true#gh-light-mode-only">
+  </a>
+  <a href="https://www.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=logo#gh-dark-mode-only" target="_blank">
+    <img src="assets/meilisearch-logo-dark.svg?sanitize=true#gh-dark-mode-only">
+  </a>
 </p>
 
-<h1 align="center">MeiliSearch</h1>
-
 <h4 align="center">
-  <a href="https://www.meilisearch.com">Website</a> |
+  <a href="https://www.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">Website</a> |
   <a href="https://roadmap.meilisearch.com/tabs/1-under-consideration">Roadmap</a> |
-  <a href="https://blog.meilisearch.com">Blog</a> |
-  <a href="https://fr.linkedin.com/company/meilisearch">LinkedIn</a> |
-  <a href="https://twitter.com/meilisearch">Twitter</a> |
-  <a href="https://docs.meilisearch.com">Documentation</a> |
-  <a href="https://docs.meilisearch.com/faq/">FAQ</a>
+  <a href="https://www.meilisearch.com/pricing?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">Meilisearch Cloud</a> |
+  <a href="https://blog.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">Blog</a> |
+  <a href="https://www.meilisearch.com/docs?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">Documentation</a> |
+  <a href="https://www.meilisearch.com/docs/faq?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">FAQ</a> |
+  <a href="https://discord.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=nav">Discord</a>
 </h4>
 
 <p align="center">
-  <a href="https://github.com/meilisearch/MeiliSearch/actions"><img src="https://github.com/meilisearch/MeiliSearch/workflows/Cargo%20test/badge.svg" alt="Build Status"></a>
-  <a href="https://deps.rs/repo/github/meilisearch/MeiliSearch"><img src="https://deps.rs/repo/github/meilisearch/MeiliSearch/status.svg" alt="Dependency status"></a>
-  <a href="https://github.com/meilisearch/MeiliSearch/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
-  <a href="https://slack.meilisearch.com"><img src="https://img.shields.io/badge/slack-MeiliSearch-blue.svg?logo=slack" alt="Slack"></a>
-  <a href="https://github.com/meilisearch/MeiliSearch/discussions" alt="Discussions"><img src="https://img.shields.io/badge/github-discussions-red" /></a>
-  <a href="https://app.bors.tech/repositories/26457"><img src="https://bors.tech/images/badge_small.svg" alt="Bors enabled"></a>
+  <a href="https://deps.rs/repo/github/meilisearch/meilisearch"><img src="https://deps.rs/repo/github/meilisearch/meilisearch/status.svg" alt="Dependency status"></a>
+  <a href="https://github.com/meilisearch/meilisearch/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
+  <a href="https://ms-bors.herokuapp.com/repositories/52"><img src="https://bors.tech/images/badge_small.svg" alt="Bors enabled"></a>
 </p>
 
-<p align="center">⚡ Lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine 🔍</p>
+<p align="center">⚡ A lightning-fast search engine that fits effortlessly into your apps, websites, and workflow 🔍</p>
 
-**MeiliSearch** is a powerful, fast, open-source, easy to use and deploy search engine. Both searching and indexing are highly customizable. Features such as typo-tolerance, filters, and synonyms are provided out-of-the-box.
-For more information about features go to [our documentation](https://docs.meilisearch.com/).
+[Meilisearch](https://www.meilisearch.com?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=intro) helps you shape a delightful search experience in a snap, offering features that work out of the box to speed up your workflow.
 
-<p align="center">
-  <img src="assets/trumen_quick_loop.gif" alt="Web interface gif" />
+<p align="center" name="demo">
+  <a href="https://where2watch.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demo-gif#gh-light-mode-only" target="_blank">
+    <img src="assets/demo-light.gif#gh-light-mode-only" alt="A bright colored application for finding movies screening near the user">
+  </a>
+  <a href="https://where2watch.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demo-gif#gh-dark-mode-only" target="_blank">
+    <img src="assets/demo-dark.gif#gh-dark-mode-only" alt="A dark colored application for finding movies screening near the user">
+  </a>
 </p>
+
+## 🖥 Examples
+
+- [**Movies**](https://where2watch.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=organization) — An application to help you find streaming platforms to watch movies using [hybrid search](https://www.meilisearch.com/solutions/hybrid-search?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos).
+- [**Ecommerce**](https://ecommerce.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos) — Ecommerce website using disjunctive [facets](https://www.meilisearch.com/docs/learn/fine_tuning_results/faceted_search?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos), range and rating filtering, and pagination.
+- [**Songs**](https://music.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos) — Search through 47 million of songs.
+- [**SaaS**](https://saas.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos) — Search for contacts, deals, and companies in this [multi-tenant](https://www.meilisearch.com/docs/learn/security/multitenancy_tenant_tokens?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demos) CRM application.
+
+See the list of all our example apps in our [demos repository](https://github.com/meilisearch/demos).
 
 ## ✨ Features
-* Search-as-you-type experience (answers < 50 milliseconds)
-* Full-text search
-* Typo tolerant (understands typos and misspelling)
-* Faceted search and filters
-* Supports hanzi (Chinese characters)
-* Supports synonyms
-* Easy to install, deploy, and maintain
-* Whole documents are returned
-* Highly customizable
-* RESTful API
+- **Hybrid search:** Combine the best of both [semantic](https://www.meilisearch.com/docs/learn/experimental/vector_search?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features) & full-text search to get the most relevant results
+- **Search-as-you-type:** Find & display results in less than 50 milliseconds to provide an intuitive experience
+- **[Typo tolerance](https://www.meilisearch.com/docs/learn/relevancy/typo_tolerance_settings?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** get relevant matches even when queries contain typos and misspellings
+- **[Filtering](https://www.meilisearch.com/docs/learn/fine_tuning_results/filtering?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features) and [faceted search](https://www.meilisearch.com/docs/learn/fine_tuning_results/faceted_search?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** enhance your users' search experience with custom filters and build a faceted search interface in a few lines of code
+- **[Sorting](https://www.meilisearch.com/docs/learn/fine_tuning_results/sorting?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** sort results based on price, date, or pretty much anything else your users need
+- **[Synonym support](https://www.meilisearch.com/docs/learn/relevancy/synonyms?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** configure synonyms to include more relevant content in your search results
+- **[Geosearch](https://www.meilisearch.com/docs/learn/fine_tuning_results/geosearch?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** filter and sort documents based on geographic data
+- **[Extensive language support](https://www.meilisearch.com/docs/learn/what_is_meilisearch/language?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** search datasets in any language, with optimized support for Chinese, Japanese, Hebrew, and languages using the Latin alphabet
+- **[Security management](https://www.meilisearch.com/docs/learn/security/master_api_keys?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** control which users can access what data with API keys that allow fine-grained permissions handling
+- **[Multi-Tenancy](https://www.meilisearch.com/docs/learn/security/multitenancy_tenant_tokens?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** personalize search results for any number of application tenants
+- **Highly Customizable:** customize Meilisearch to your specific needs or use our out-of-the-box and hassle-free presets
+- **[RESTful API](https://www.meilisearch.com/docs/reference/api/overview?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=features):** integrate Meilisearch in your technical stack with our plugins and SDKs
+- **AI-ready:** works out of the box with [langchain](https://www.meilisearch.com/with/langchain) and the [model context protocol](https://github.com/meilisearch/meilisearch-mcp)
+- **Easy to install, deploy, and maintain**
 
-## Getting started
+## 📖 Documentation
 
-### Deploy the Server
+You can consult Meilisearch's documentation at [meilisearch.com/docs](https://www.meilisearch.com/docs/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=docs).
 
-#### Homebrew (Mac OS)
+## 🚀 Getting started
 
-```bash
-brew update && brew install meilisearch
-meilisearch
-```
+For basic instructions on how to set up Meilisearch, add documents to an index, and search for documents, take a look at our [documentation](https://www.meilisearch.com/docs?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=get-started) guide.
 
-#### Docker
+## 🌍 Supercharge your Meilisearch experience
 
-```bash
-docker run -p 7700:7700 -v "$(pwd)/data.ms:/data.ms" getmeili/meilisearch
-```
+Say goodbye to server deployment and manual updates with [Meilisearch Cloud](https://www.meilisearch.com/cloud?utm_campaign=oss&utm_source=github&utm_medium=meilisearch). Additional features include analytics & monitoring in many regions around the world. No credit card is required.
 
-#### Try MeiliSearch in our Sandbox
+## 🧰 SDKs & integration tools
 
-Create a MeiliSearch instance in [MeiliSearch Sandbox](https://sandbox.meilisearch.com/). This instance is free, and will be active for 48 hours.
+Install one of our SDKs in your project for seamless integration between Meilisearch and your favorite language or framework!
 
-#### Run on Digital Ocean
+Take a look at the complete [Meilisearch integration list](https://www.meilisearch.com/docs/learn/what_is_meilisearch/sdks?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=sdks-link).
 
-[![DigitalOcean Marketplace](assets/do-btn-blue.svg)](https://marketplace.digitalocean.com/apps/meilisearch?action=deploy&refcode=7c67bd97e101)
+[![Logos belonging to different languages and frameworks supported by Meilisearch, including React, Ruby on Rails, Go, Rust, and PHP](assets/integrations.png)](https://www.meilisearch.com/docs/learn/what_is_meilisearch/sdks?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=sdks-logos)
 
-#### Deploy on Platform.sh
+## ⚙️ Advanced usage
 
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/meilisearch/.platform.template.yaml&utm_content=meilisearch&utm_source=github&utm_medium=button&utm_campaign=deploy_on_platform">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="180px" />
-</a>
+Experienced users will want to keep our [API Reference](https://www.meilisearch.com/docs/reference/api/overview?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced) close at hand.
 
-#### APT (Debian & Ubuntu)
+We also offer a wide range of dedicated guides to all Meilisearch features, such as [filtering](https://www.meilisearch.com/docs/learn/fine_tuning_results/filtering?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced), [sorting](https://www.meilisearch.com/docs/learn/fine_tuning_results/sorting?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced), [geosearch](https://www.meilisearch.com/docs/learn/fine_tuning_results/geosearch?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced), [API keys](https://www.meilisearch.com/docs/learn/security/master_api_keys?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced), and [tenant tokens](https://www.meilisearch.com/docs/learn/security/tenant_tokens?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced).
 
-```bash
-echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" > /etc/apt/sources.list.d/fury.list
-apt update && apt install meilisearch-http
-meilisearch
-```
+Finally, for more in-depth information, refer to our articles explaining fundamental Meilisearch concepts such as [documents](https://www.meilisearch.com/docs/learn/core_concepts/documents?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced) and [indexes](https://www.meilisearch.com/docs/learn/core_concepts/indexes?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=advanced).
 
-#### Download the binary (Linux & Mac OS)
+## 📊 Telemetry
 
-```bash
-curl -L https://install.meilisearch.com | sh
-./meilisearch
-```
+Meilisearch collects **anonymized** user data to help us improve our product. You can [deactivate this](https://www.meilisearch.com/docs/learn/what_is_meilisearch/telemetry?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=telemetry#how-to-disable-data-collection) whenever you want.
 
-#### Compile and run it from sources
+To request deletion of collected data, please write to us at [privacy@meilisearch.com](mailto:privacy@meilisearch.com). Remember to include your `Instance UID` in the message, as this helps us quickly find and delete your data.
 
-If you have the latest stable Rust toolchain installed on your local system, clone the repository and change it to your working directory.
+If you want to know more about the kind of data we collect and what we use it for, check the [telemetry section](https://www.meilisearch.com/docs/learn/what_is_meilisearch/telemetry?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=telemetry#how-to-disable-data-collection) of our documentation.
 
-```bash
-git clone https://github.com/meilisearch/MeiliSearch.git
-cd MeiliSearch
-cargo run --release
-```
+## 📫 Get in touch!
 
-### Create an Index and Upload Some Documents
+Meilisearch is a search engine created by [Meili]([https://www.welcometothejungle.com/en/companies/meilisearch](https://www.meilisearch.com/careers)), a software development company headquartered in France and with team members all over the world. Want to know more about us? [Check out our blog!](https://blog.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=contact)
 
-Let's create an index! If you need a sample dataset, use [this movie database](https://www.notion.so/meilisearch/A-movies-dataset-to-test-Meili-1cbf7c9cfa4247249c40edfa22d7ca87#b5ae399b81834705ba5420ac70358a65). You can also find it in the `datasets/` directory.
+🗞 [Subscribe to our newsletter](https://meilisearch.us2.list-manage.com/subscribe?u=27870f7b71c908a8b359599fb&id=79582d828e) if you don't want to miss any updates! We promise we won't clutter your mailbox: we only send one edition every two months.
 
-```bash
-curl -L 'https://bit.ly/2PAcw9l' -o movies.json
-```
+💌 Want to make a suggestion or give feedback? Here are some of the channels where you can reach us:
 
-Now, you're ready to index some data. 
+- For feature requests, please visit our [product repository](https://github.com/meilisearch/product/discussions)
+- Found a bug? Open an [issue](https://github.com/meilisearch/meilisearch/issues)!
+- Want to be part of our Discord community? [Join us!](https://discord.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=contact)
 
-```bash
-curl -i -X POST 'http://127.0.0.1:7700/indexes/movies/documents' \
-  --header 'content-type: application/json' \
-  --data-binary @movies.json
-```
+Thank you for your support!
 
-### Search for Documents
+## 👩‍💻 Contributing
 
-#### In command line
+Meilisearch is, and will always be, open-source! If you want to contribute to the project, please look at [our contribution guidelines](CONTRIBUTING.md).
 
-The search engine is now aware of your documents and can serve those via an HTTP server.
+## 📦 Versioning
 
-The [`jq` command-line tool](https://stedolan.github.io/jq/) can greatly help you read the server responses.
+Meilisearch releases and their associated binaries are available on the project's [releases page](https://github.com/meilisearch/meilisearch/releases).
 
-```bash
-curl 'http://127.0.0.1:7700/indexes/movies/search?q=botman+robin&limit=2' | jq
-```
+The binaries are versioned following [SemVer conventions](https://semver.org/). To know more, read our [versioning policy](https://github.com/meilisearch/engine-team/blob/main/resources/versioning-policy.md).
 
-```json
-{
-  "hits": [
-    {
-      "id": "415",
-      "title": "Batman & Robin",
-      "poster": "https://image.tmdb.org/t/p/w1280/79AYCcxw3kSKbhGpx1LiqaCAbwo.jpg",
-      "overview": "Along with crime-fighting partner Robin and new recruit Batgirl, Batman battles the dual threat of frosty genius Mr. Freeze and homicidal horticulturalist Poison Ivy. Freeze plans to put Gotham City on ice, while Ivy tries to drive a wedge between the dynamic duo.",
-      "release_date": 866768400
-    },
-    {
-      "id": "411736",
-      "title": "Batman: Return of the Caped Crusaders",
-      "poster": "https://image.tmdb.org/t/p/w1280/GW3IyMW5Xgl0cgCN8wu96IlNpD.jpg",
-      "overview": "Adam West and Burt Ward returns to their iconic roles of Batman and Robin. Featuring the voices of Adam West, Burt Ward, and Julie Newmar, the film sees the superheroes going up against classic villains like The Joker, The Riddler, The Penguin and Catwoman, both in Gotham City… and in space.",
-      "release_date": 1475888400
-    }
-  ],
-  "nbHits": 8,
-  "exhaustiveNbHits": false,
-  "query": "botman robin",
-  "limit": 2,
-  "offset": 0,
-  "processingTimeMs": 2
-}
-```
-
-#### Use the Web Interface
-
-We also deliver an **out-of-the-box [web interface](https://github.com/meilisearch/mini-dashboard)** in which you can test MeiliSearch interactively.
-
-You can access the web interface in your web browser at the root of the server. The default URL is [http://127.0.0.1:7700](http://127.0.0.1:7700). All you need to do is open your web browser and enter MeiliSearch’s address to visit it. This will lead you to a web page with a search bar that will allow you to search in the selected index.
-
-| [See the gif above](#demo)
-
-## Documentation
-
-Now that your MeiliSearch server is up and running, you can learn more about how to tune your search engine in [the documentation](https://docs.meilisearch.com).
-
-## Contributing
-
-Hey! We're glad you're thinking about contributing to MeiliSearch! However, we are currently working on a huge refactor and accepting PRs on this repository wouldn't be productive. We are sorry about this! Be sure we are doing our best so that you can contribute to MeiliSearch again as soon as possible ❤️
-
-## Telemetry
-
-MeiliSearch collects anonymous data regarding general usage.
-This helps us better understand developers' usage of MeiliSearch features.
-
-To see what information we're retrieving, please see the complete list [on the dedicated issue](https://github.com/meilisearch/MeiliSearch/issues/720).
-
-We also use Sentry to make us crash and error reports. If you want to know more about what Sentry collects, please visit their [privacy policy website](https://sentry.io/privacy/).
-
-This program is optional, you can disable these analytics by using the `MEILI_NO_ANALYTICS` env variable.
-
-## 💌 Contact
-
-Feel free to contact us with any questions you may have:
-* 🆕 Join our [GitHub Discussions forum](https://github.com/meilisearch/MeiliSearch/discussions)
-* Join our [Slack community](https://slack.meilisearch.com/).
-* By opening an issue.
-
-MeiliSearch is developed by [Meili](https://www.meilisearch.com), a young company. To know more about us, you can [read our blog](https://blog.meilisearch.com). Any suggestion or feedback is highly appreciated. Thank you for your support!
+Differently from the binaries, crates in this repository are not currently available on [crates.io](https://crates.io/) and do not follow [SemVer conventions](https://semver.org).
